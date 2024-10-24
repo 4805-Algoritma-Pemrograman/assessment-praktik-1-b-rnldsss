@@ -10,7 +10,7 @@ public class Nomor1 {
 
         // Menghitung komisi
         if (totalPenjualan <= 500000) {
-            System.out.printf("%.1f%n", totalPenjualan);
+            komisi = totalPenjualan * 0.10;
         } else {
             double komisiPertama = 500000 * 0.10;
             double sisaPenjualan = totalPenjualan - 500000;
