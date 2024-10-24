@@ -3,12 +3,12 @@ import java.util.Scanner;
 public class Nomor1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         // Input total penjualan
         double totalPenjualan = scanner.nextDouble();
         double komisi;
 
-        // Menghitung komisi 
+        // Menghitung komisi
         if (totalPenjualan <= 500000) {
             komisi = totalPenjualan * 0.10;
         } else {
