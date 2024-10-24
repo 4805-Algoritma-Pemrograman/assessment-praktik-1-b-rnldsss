@@ -1,7 +1,25 @@
+import java.util.Scanner;
 
+public class Nomor1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Membaca total penjualan
+        double totalPenjualan = scanner.nextDouble();
+        double komisi;
 
-public class Nomor1{
-    public static void main(String[] args){
-      
+        // Menghitung komisi dari total penjualan
+        if (totalPenjualan <= 500000) {
+            komisi = totalPenjualan * 0.10;
+        } else {
+            double komisiPertama = 500000 * 0.10;
+            double sisaPenjualan = totalPenjualan - 500000;
+            double komisiSisa = sisaPenjualan * 0.15;
+            komisi = komisiPertama + komisiSisa;
+        }
+
+        // Print hasil komisi
+        System.out.println(komisi);
+        scanner.close();
     }
 }
