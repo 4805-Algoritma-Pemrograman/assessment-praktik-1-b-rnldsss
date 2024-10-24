@@ -9,7 +9,7 @@ public class Nomor1 {
         double komisi;
 
         // Menghitung komisi
-        if (totalPenjualan < 500000) {
+        if (totalPenjualan <= 500000) {
             komisi = totalPenjualan * 0.10;
         } else {
             double komisiPertama = 500000 * 0.10;
