@@ -8,9 +8,7 @@ public class Nomor2 {
         boolean inputLagi = true;
 
         while (inputLagi) {
-            System.out.print("Masukan kode bungalow [1/2/3]: ");
             int kodeBungalow = scanner.nextInt();
-            System.out.print("lama menginap (malam): ");
             int lamaMenginap = scanner.nextInt();
 
             double tarif = 0;
@@ -41,14 +39,13 @@ public class Nomor2 {
             totalPendapatan += totalBiaya;
             jumlahTransaksi++;
 
-            System.out.print("Input lagi (Y/N)?: ");
             char input = scanner.next().charAt(0);
             inputLagi = (input == 'Y' || input == 'y');
         }
 
-        // Print jumlah transaksi sama total pendapatan.
-        System.out.println("Jumlah transaksi penyewaan bungalow = "  + jumlahTransaksi);
-        System.out.println("Total pendapatan = "  + totalPendapatan);
+        System.out.println(jumlahTransaksi);
+        System.out.printf("%.1f%n", totalPendapatan);
+
         scanner.close();
     }
 }
