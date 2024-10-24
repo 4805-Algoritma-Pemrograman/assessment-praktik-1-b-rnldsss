@@ -3,26 +3,12 @@ import java.util.Scanner;
 public class Nomor1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
-        double totalPenjualan;
-        
-        totalPenjualan = scanner.nextDouble();
-        double komisi = hitungKomisi(totalPenjualan);
-        
-        System.out.printf("Total penjualan salesman: %.0f%n", totalPenjualan);
-        System.out.printf("Komisi yang didapatkan = %.1f%n", komisi);
-        
-        totalPenjualan = scanner.nextDouble();
-        komisi = hitungKomisi(totalPenjualan);
-        
-        System.out.printf("Total penjualan salesman: %.0f%n", totalPenjualan);
-        System.out.printf("Komisi yang didapatkan = %.1f%n", komisi);
-        
-        scanner.close();
-    }
 
-    public static double hitungKomisi(double totalPenjualan) {
+        // Input total penjualan
+        double totalPenjualan = scanner.nextDouble();
         double komisi;
+
+        // Menghitung komisi
         if (totalPenjualan <= 500000) {
             komisi = totalPenjualan * 0.10;
         } else {
@@ -31,6 +17,9 @@ public class Nomor1 {
             double komisiSisa = sisaPenjualan * 0.15;
             komisi = komisiPertama + komisiSisa;
         }
-        return komisi;
+
+        // Print hasil komisi
+        System.out.printf("%.1f%n", komisi);
+        scanner.close();
     }
 }
