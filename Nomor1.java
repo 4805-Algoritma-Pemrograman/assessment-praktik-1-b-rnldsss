@@ -4,11 +4,11 @@ public class Nomor1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        // Membaca total penjualan
+        // Input total penjualan
         double totalPenjualan = scanner.nextDouble();
         double komisi;
 
-        // Menghitung komisi dari total penjualan
+        // Menghitung komisi 
         if (totalPenjualan <= 500000) {
             komisi = totalPenjualan * 0.10;
         } else {
@@ -19,7 +19,7 @@ public class Nomor1 {
         }
 
         // Print hasil komisi
-        System.out.println(komisi);
+        System.out.printf("%.1f%n", komisi);
         scanner.close();
     }
 }
